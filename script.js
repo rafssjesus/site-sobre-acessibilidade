@@ -1,38 +1,17 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
-    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
- 
-    botaoDeAcessibilidade.addEventListener('click', function (){
-     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
-     opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
- 
-     const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-     botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
-   
-    })
- 
-     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
-     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
-     
-     const alternaContraste = document.getElementById('alterna-contraste')
- 
-     let tamanhoAtualFonte = 1;
- 
-     aumentaFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte += 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     diminuiFonteBotao.addEventListener('click', function(){
-         tamanhoAtualFonte -= 0.1;
-         document.body.style.fontSize = `${tamanhoAtualFonte}rem`
- 
-     })
- 
-     alternaContraste.addEventListener('click', function(){
-         document.body.classList.toggle('alto-contraste')
-     })
- 
- 
- })
+// Selecione os botões
+const botaoAcessibilidade = document.getElementById('botao-acessibilidade');
+const botaoAumentarFonte = document.getElementById('aumentar-fonte');
+const botaoDiminuirFonte = document.getElementById('diminuir-fonte');
+
+// Adicione eventos de clique aos botões
+botaoAcessibilidade.addEventListener('click', () => {
+    // Abra ou feche o menu de acessibilidade
+});
+
+botaoAumentarFonte.addEventListener('click', () => {
+    // Aumente o tamanho da fonte
+});
+
+botaoDiminuirFonte.addEventListener('click', () => {
+    // Diminua o tamanho da fonte
+});
